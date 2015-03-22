@@ -1,12 +1,6 @@
 <?php
 /**
  * The template for displaying the footer.
- *
- * Contains the closing of the id=main div and all content after
- *
- * @package WordPress
- * @subpackage SH_Base
- * @since SH Base 1.0
  */
 ?>
 </main>
@@ -18,6 +12,9 @@
 	</div><!-- #creditos -->  
 
 </footer>
+
+<!-- JS personalizados del tema -->
+<?php themejs(); ?>
 
 <?php wp_footer(); ?>
 

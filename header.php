@@ -59,7 +59,6 @@
 
 <div class="header-wrapper">
     <header id="header" class="header" role="banner" >
-    	<?php fancy_header(); ?>
                 
             <!-- Logo -->
             <a href="<?php inicio_url(); ?>" id="header-logo" class="logo">
@@ -91,8 +90,14 @@
             
             <!-- Menú principal -->        
             <nav id="header-main-nav" class="main-nav" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-            </nav><!-- .main-nav -->
+                <!-- Icono de menú para versión adaptativa -->
+                <a class="toggle-nav" href="#">MENU DE NAVEGACIÓN</a>
+                <!-- Menu WordPress -->
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'activo', 'menu_id' => 'header-menu') ); ?>
+                
+            </nav>
+            
+            
 
     </header>
 </div>

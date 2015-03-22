@@ -9,7 +9,7 @@
 		padding-right: 2%;	
 		float: left;
 		
-		@media (max-width: $destop-width) {
+		@media (max-width: $desktop-width) {
 			width: 100%;
 			padding: 0;
 			float: none;
@@ -42,7 +42,7 @@
 		border-radius: 4px;
 		font-size: .9em;
 
-		@media (max-width: $destop-width) {
+		@media (max-width: $desktop-width) {
 			padding: 4%;	
 			width: 92%;
 			float: none;

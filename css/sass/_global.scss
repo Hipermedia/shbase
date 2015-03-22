@@ -20,12 +20,12 @@ body {
 .content-wrapper {
 	background: #fff;
 	margin: 0 auto;
-	max-width: $destop-width;
+	max-width: $desktop-width;
 	display: block;
 	overflow: hidden; 
 	padding-top: $header-height;
 	
-	@media (max-width: $destop-width) {
+	@media (max-width: $desktop-width) {
 		padding-top: 0;
 	}
 }
@@ -46,12 +46,10 @@ a:hover {
 .admin-bar .navbar-fixed-top {
 	margin-top: 30px;
 }
-
 .u-center-box {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .u-remove {
 	display: none;
 }
