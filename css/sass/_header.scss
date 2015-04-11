@@ -3,26 +3,33 @@
 /*------------------------------------------------*/
 
 .header-wrapper {
-	width: $desktop-width;
-	margin: 0 auto;
-	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
+	background: #fff;
+	@include transicion();
+	height: $header-height;
 
-	@media (max-width: $desktop-width) {
-		width: 100%;
+	&.tiny {
+		height: 60px;
 	}
 }
 
 .header { 
+	position: relative;
 	overflow: hidden; 
 	white-space: nowrap;
 	clear: both;
 	display: block;
-	height: $header-height;
 	width: $desktop-width;
+	height: $header-height;
 	background: $header-bg;
 	margin: 0 auto;
 	z-index: 99;
 	position: fixed;
+	left: 0;
+	right: 0;
 	@include transicion();
 	
 	@media (max-width: $desktop-width) {
