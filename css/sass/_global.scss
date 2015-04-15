@@ -6,7 +6,7 @@
 ----------------------------------------------- */
  * { 
  	box-sizing: Border-box 
- }#s
+ }
 
 html {
 	font-size: 16px; /* 16px */
@@ -16,6 +16,7 @@ body {
 	font-family: $global-font;
 	line-height: 1.5em; /* 24px */
 	background: $body-bg;
+	margin: 0;
 }
 .content-wrapper {
 	background: #fff;
@@ -44,7 +45,7 @@ a:hover {
 /* = Utilidades
 ----------------------------------------------- */
 .admin-bar .navbar-fixed-top {
-	margin-top: 30px;
+	margin-top: 32px;
 }
 .u-center-box {
 	margin-left: auto;

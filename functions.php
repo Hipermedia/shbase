@@ -4,7 +4,36 @@
 /**
  * Funciones personalizadas de Soluciones Hipermedia
  */
- 
+
+/* Redirige a la portada si el usuario no está logeado 
+* ------------------------------------------------------------- */
+ function soloUsuarioRegistrado() 
+ {
+	 if (!is_user_logged_in()) 
+	 {
+	   wp_redirect( home_url(), 302 ); exit;
+	 } 
+ }
+/* Oculta la barra de administrador si no es usuario 
+ * ------------------------------------------------------------- */
+function remueveBarraAdmin() 
+{
+	if (!current_user_can('administrator') && !is_admin()) 
+	{
+	  show_admin_bar(false);
+	}
+}
+add_action('after_setup_theme', 'remueveBarraAdmin');
+
+ /* Redirige a no administradores al home del sitio  
+ * ------------------------------------------------------------- */
+function sh_login_redirect( $redirect_to, $request, $user  ) 
+{
+	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url();
+}
+add_filter( 'login_redirect', 'sh_login_redirect', 10, 3 );
+
+
 /** Imprime una variable de OT; valida que exista la función y permite 
  * imprimir un valor por defecto si el campo está vacio  
  */
@@ -39,6 +68,11 @@ function get_plantilla_url() {
 }
 function the_social_share() {
 	get_template_part( 'socialshare');
+}
+function the_custom_meta() {
+  print 'Publicado por <strong>' . get_the_author() .'</strong>'
+  		. ' el ' . get_the_time('j \d\e\ F \d\e\ Y') 
+  		. ' a las ' . get_the_time('g:i a');
 }
 
 /**
@@ -143,7 +177,7 @@ if ( ! function_exists( 'shbase_continue_reading_link' ) ) :
  * Returns a "Continue Reading" link for excerpts
  */
 function shbase_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shbase' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continuar leyendo <span class=\"meta-nav\"></span>', 'shbase' ) . '</a>';
 }
 endif; // shbase_continue_reading_link
 
@@ -355,52 +389,6 @@ function add_google_tags() {
 
 <?php 
 add_action('wp_head', 'add_google_tags',99);
-}
-
-/**
- *  LIMITA CARACTERES DEL EXTRACTO DE WORDPRESS
- */
-
-function wp_limit_post($max_char, $more_link_text = '[...]',$notagp = false, $stripteaser = 0, $more_file = '') {
-    $content = get_the_excerpt($more_link_text, $stripteaser, $more_file);
-    $content = apply_filters('the_content', $content);
-    $content = str_replace(']]>', ']]&gt;', $content);
-    $content = strip_tags($content);
-
-   if (strlen($_GET['p']) > 0) {
-      if($notagp) {
-      echo substr($content,0,$max_char);
-      }
-      else {
-      echo '<p>';
-      echo substr($content,0,$max_char);
-      echo "</p>";
-      }
-   }
-   else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
-        $content = substr($content, 0, $espacio);
-        $content = $content;
-        if($notagp) {
-        echo substr($content,0,$max_char);
-        echo $more_link_text;
-        }
-        else {
-        echo '<p>';
-        echo substr($content,0,$max_char);
-        echo $more_link_text;
-        echo "</p>";
-        }
-   }
-   else {
-      if($notagp) {
-      echo substr($content,0,$max_char);
-      }
-      else {
-      echo '<p>';
-      echo substr($content,0,$max_char);
-      echo "</p>";
-      }
-   }
 }
 
 /**

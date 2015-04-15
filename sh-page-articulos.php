@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Resumen de contenido
+ * Template Name: Artículos
  * Description: Permite crear una página de resumen de categoría obteniéndola vía ACF
  *
  * @package WordPress

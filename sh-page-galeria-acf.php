@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Galería de medios
+ * Template Name: Galería
  * Description: Crea la portada de un conjunto de galerías vía ACF.
  *
  * @package WordPress
@@ -9,7 +9,8 @@
  */
 
 get_header(); ?>
-<div id="primary-full">
+
+<section class="content">
 <?php get_template_part( 'content', 'submenu-acf' ); ?>
     <div id="content" role="main">
 
@@ -27,31 +28,16 @@ get_header(); ?>
                 <section class="entry-galeria-medios2 group">
                     
                     <!-- PORTADAS DE GALERÍA DE MEDIOS-->
-                    <?php if(get_field('portada_de_galeria')): ?>
+                    <?php if(get_field('galeria')): ?>
                     	
-                        <?php while(has_sub_field('portada_de_galeria')): ?>
+                        <?php while(has_sub_field('galeria')): ?>
                      
-							<?php // elige el icono para el tipo de documento
-							 
-							$medio = get_sub_field('tipo_de_la_galeria'); 
-							switch ($medio) {
-								case 'audio': 
-									$tipo = 'fa-music';
-									break;
-								case 'video':
-									$tipo = 'fa-video-camera';	
-									break;
-								default:
-									$tipo = 'fa-picture-o';
-								}								
-								 ?>
-
-                                <a class="bloque-galeria-medios2" href="<?php the_sub_field('enlace_de_la_galeria'); ?>">
+							    <a class="bloque-galeria-medios2" href="<?php the_sub_field('url'); ?>">
                                     <div class="tipo-medio">
                                         <i class="fa <?php echo $tipo; ?> fa-2x"></i>
                                     </div>
-                                    <h3><?php the_sub_field('nombre_de_la_galeria'); ?></h3>
-                                    <img src="<?php the_sub_field('portada_de_la_galeria'); ?>" />      
+                                    <h3><?php the_sub_field('titulo'); ?></h3>
+                                    <img src="<?php the_sub_field('imagen'); ?>" />      
                                 </a>
 						
 						<?php endwhile; ?>
@@ -67,7 +53,7 @@ get_header(); ?>
           
 		  <?php endwhile; // end of the loop. ?>
             
-    </div><!-- #content -->
-</div><!-- #primary -->
+
+</section><!-- .content -->
 
 <?php get_footer(); ?>

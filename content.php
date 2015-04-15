@@ -8,16 +8,22 @@
  */
 ?>
 
-<article class="resumen-articulo">
-    <header class="entry-header">
-        <h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-        <h4 class="entry-autor">Publicado por <?php the_author(); ?></h4>
-    </header><!-- .entry-header -->
+<article class="articulos">
+
+        <h2 class="titulo">
+            <a href="<?php the_permalink(); ?>" rel="bookmark" alt="Enlace a <?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h2>
+        <div class="meta">
+           <?php the_custom_meta(); ?>
+        </div>
     
-    <div class="entry-summary">
-        <?php the_excerpt(); ?>
-        <?php if ( has_post_thumbnail() ) {	?>
-            <div class="entry-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+    <div class="resumen">
+        <?php if ( has_post_thumbnail() ) { ?>
+            <figure class="thumb">
+                <?php the_post_thumbnail('medium'); ?>
+            </figure>
         <?php } ?>
+        <?php the_excerpt(); ?>
     </div><!-- .entry-summary -->
+    
 </article>

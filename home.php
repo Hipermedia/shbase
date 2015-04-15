@@ -49,7 +49,7 @@ get_header(); ?>
     <?php get_sidebar(); ?>    
                     
     <!-- Galería en portafa (Formato filmstrip) -->
-    <?php get_template_part( 'content', 'galeria-filmstrip-slider' ); ?>          
+    <?php get_template_part( 'inc/content', 'galeria-filmstrip-slider' ); ?>          
           
 </section><!-- .portada -->
 

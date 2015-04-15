@@ -14,13 +14,13 @@
 
 			<ul class="option-tabs group">
 				<?php while(has_sub_field('pestanas')): ?>
-					<li class="title-sh-tabs"><?php the_sub_field('nombre_de_la_pestana'); ?></li>
+					<li class="title-sh-tabs"><?php the_sub_field('titulo'); ?></li>
 				<?php endwhile; ?>
 			</ul>
 
 			<?php while(has_sub_field('pestanas')): ?>
 				<div class="content-sh-tabs entry-content">
-					<?php the_sub_field('contenido_de_la_pestana'); ?>
+					<?php the_sub_field('contenido'); ?>
 				</div>
 			<?php endwhile; ?>
 

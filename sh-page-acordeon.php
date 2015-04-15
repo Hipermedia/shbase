@@ -30,8 +30,8 @@ get_header(); ?>
                         <?php $num_contenido = 1; ?>
                         <?php while(has_sub_field('acordeon')): ?>
                             <section class="bloque-acordeon">
-                                <h3 id="titulo-acordeon<?php echo $num_titulo++; ?>" class="titulo-acordeon fa fa-plus-square"><span><?php the_sub_field('titulo_de_la_pestana'); ?></span></h3>
-                                <div id="contenido-acordeon<?php echo $num_contenido++; ?>" class="contenido-acordeon entry-content"><?php the_sub_field('contenido_de_la_pestana'); ?></div>
+                                <h3 id="titulo-acordeon<?php echo $num_titulo++; ?>" class="titulo-acordeon fa fa-plus-square"><span><?php the_sub_field('titulo'); ?></span></h3>
+                                <div id="contenido-acordeon<?php echo $num_contenido++; ?>" class="contenido-acordeon entry-content"><?php the_sub_field('contenido'); ?></div>
                             </section>
                         <?php endwhile; ?>
                     <?php endif; ?>

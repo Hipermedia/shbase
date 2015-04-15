@@ -13,7 +13,7 @@
 		<div class="bloque-documento">	
         	
             <?php // elige el icono para el tipo de documento 
-			$doc = get_sub_field('tipo_de_documento'); 
+			$doc = get_sub_field('tipo'); 
 			switch ($doc) {
 				case 'texto': 
 					$tipo = 'fa-file-text';
@@ -27,12 +27,12 @@
 				default:
 					$tipo = ' fa-file';
 			} ?>
-            <a class="link-documento" href="<?php the_sub_field('archivo_del_documento'); ?>" rel="<?php the_sub_field('titulo'); ?>">
+            <a class="link-documento" href="<?php the_sub_field('archivo'); ?>" rel="<?php the_sub_field('titulo'); ?>">
             	<div class="tipo-documento"><i class="fa <?php echo $tipo; ?>"></i></div>
             	<h3><?php the_sub_field('titulo'); ?></h3>
             </a>
-            <p class="descripcion-documento">Descripción: <?php the_sub_field('descripcion_del_archivo'); ?></p>
-            <a class="descargar-documento" href="<?php the_sub_field('archivo_del_documento'); ?>" rel="<?php the_sub_field('titulo'); ?>"><i class="fa fa-cloud-download fa-2x"></i>
+            <p class="descripcion-documento">Descripción: <?php the_sub_field('descripcion'); ?></p>
+            <a class="descargar-documento" href="<?php the_sub_field('archivo'); ?>" rel="<?php the_sub_field('titulo'); ?>"><i class="fa fa-cloud-download fa-2x"></i>
             <br />Descargar</a>            
         </div>
 	

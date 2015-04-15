@@ -21,18 +21,18 @@ get_header(); ?>
 
                         <div class="item">
                             
-                            <?php if( get_sub_field('enlace_del_elemento') ) {?>
-                                <a class="group" href="<?php the_sub_field('enlace_del_elemento'); ?>">
-                                    <img src="<?php the_sub_field('portada_del_elemento'); ?>" />
-                                    <h2><?php the_sub_field('nombre_del_elemento'); ?></h2>                    
-                                    <h3><?php the_sub_field('subtitulo_del_elemento'); ?></h3>
-                                    <p><?php the_sub_field('descripcion_del_elemento'); ?></p>
+                            <?php if( get_sub_field('url') ) {?>
+                                <a class="group" href="<?php the_sub_field('url'); ?>">
+                                    <img src="<?php the_sub_field('portada'); ?>" />
+                                    <h2><?php the_sub_field('titulo'); ?></h2>                    
+                                    <h3><?php the_sub_field('subtitulo'); ?></h3>
+                                    <p><?php the_sub_field('descripcion'); ?></p>
                                 </a>
                             <?php } else { ?>
-                                <img src="<?php the_sub_field('portada_del_elemento'); ?>" />
-                                <h2><?php the_sub_field('nombre_del_elemento'); ?></h2>
-                                <h3><?php the_sub_field('subtitulo_del_elemento'); ?></h3>
-                                <p><?php the_sub_field('descripcion_del_elemento'); ?></p>
+                                <img src="<?php the_sub_field('portada'); ?>" />
+                                <h2><?php the_sub_field('titulo'); ?></h2>
+                                <h3><?php the_sub_field('subtitulo'); ?></h3>
+                                <p><?php the_sub_field('descripcion'); ?></p>
                             <?php } ?>
                             
                         </div>
