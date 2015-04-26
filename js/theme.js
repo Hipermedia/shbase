@@ -23,4 +23,13 @@ jQuery(document).ready(function($) {
 	var url = window.location.href;
 	$('a[href="'+url+'"]').addClass('active');
 
+
+	//Agrega una animación al hacer scroll al llegar a un elemento gracias a waypoints
+
+	$('.titulo').waypoint(function(direction) {
+	  $('.titulo').addClass( 'fadeInUp animated' );
+	},{
+	  offset:'20%'
+	});
+
 });

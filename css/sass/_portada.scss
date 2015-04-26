@@ -3,45 +3,46 @@
 /*-----------------[PORTADA]----------------------*/
 /*------------------------------------------------*/
 
-/* Flexslider
------------------------------------------------ */
-#contenedor-home-flexslider .flexslider {
-	border: none;
-	margin: 0px;
-	padding-bottom: 60px;
-	background-repeat: no-repeat;
-	background-position: center bottom;	
-	box-shadow: none;	
-
-	h3 {
-	    position: absolute;
-	    bottom: 1em;
-	    left: 1em;
-	    font-size: 1.5em;
-	    color: #FFF;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
-	}
-	.flex-control-nav {
-		bottom: 1.7em;
-	}
-	.flex-control-paging li a {
-		background-color: #fff;	
-	}
-	.flex-control-paging li a.flex-active  {
-		background-color: #404041;	
-	}
-	.flex-control-paging li a {
-	    width: 14px;
-	    height: 14px;		
-	}
-}
-
 /* Contenido Portada
 ----------------------------------------------- */
 .portada {
-	padding: 1.5em 0px;
+	padding: 0;
 	margin: 0px;
 	width: 100%;
+	
+	/* Flexslider
+	----------------------------------------------- */
+	#contenedor-home-flexslider .flexslider {
+		border: none;
+		margin: 0px;
+		padding-bottom: 60px;
+		background-repeat: no-repeat;
+		background-position: center bottom;	
+		box-shadow: none;	
+
+		h3 {
+		    position: absolute;
+		    bottom: 1em;
+		    left: 1em;
+		    font-size: 1.5em;
+		    color: #FFF;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+		}
+		.flex-control-nav {
+			bottom: 1.7em;
+		}
+		.flex-control-paging li a {
+			background-color: #fff;	
+		}
+		.flex-control-paging li a.flex-active  {
+			background-color: #404041;	
+		}
+		.flex-control-paging li a {
+		    width: 14px;
+		    height: 14px;		
+		}
+	}
+
 
 	.articulos {
 		display: inline-block;
@@ -55,9 +56,6 @@
 			width: 94%;
 			margin: 3%;
 		}
-
-
-
 	}
 	.articulos #content article {
 		padding: 0;	

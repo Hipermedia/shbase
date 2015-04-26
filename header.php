@@ -43,7 +43,7 @@
 <link href="<?php plantilla_url(); ?>/inc/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!-- Favicons
   ================================================== -->
-<link href=" <?php print_ot('favicon', get_plantilla_url().'/images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
+<link href=" <?php print_ot('favicon', get_plantilla_url().'/images/favicon.png'); ?>" rel="icon" type="image/x-icon" />
 <!-- pingback
   ================================================== -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -61,7 +61,7 @@
     <header id="header" class="header" role="banner" >
                 
             <!-- Logo -->
-            <a href="<?php inicio_url(); ?>" id="header-logo" class="logo">
+            <a href="<?php inicio_url(); ?>" id="header-logo" class="logo  animated flipInX">
                 <img src="<?php print_ot('logo', get_plantilla_url().'/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
             </a>
             
@@ -94,10 +94,7 @@
                 <a class="toggle-nav" href="#">MENU DE NAVEGACIÓN</a>
                 <!-- Menu WordPress -->
                 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'activo', 'menu_id' => 'header-menu') ); ?>
-                
             </nav>
-            
-            
 
     </header>
 </div>

@@ -14,6 +14,7 @@
 </footer>
 
 <!-- JS personalizados del tema -->
+<?php waypoints(); ?>
 <?php themejs(); ?>
 
 <?php wp_footer(); ?>
