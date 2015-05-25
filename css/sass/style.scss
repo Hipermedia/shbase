@@ -29,13 +29,14 @@ Text Domain: shbase
 @import "_redes_sociales.scss";
 @import "_portada.scss";
 
+
 /* Plantillas 
 ------------------------------------------*/
 
 @import "plantillas/_contacto.scss";
 @import "plantillas/_catalogo.scss";
 @import "plantillas/_landing.scss";
-
+@import "plantillas/_multiproposito.scss";
 /* Cierre
 ------------------------------------------*/
 @import "_close.scss";

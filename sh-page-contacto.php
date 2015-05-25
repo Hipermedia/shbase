@@ -30,6 +30,7 @@ get_header(); ?>
                 </div>
 
                 <!-- Redes sociales -->
+                <h1>algo</h1>
                 <div class="social">
                     <!-- Facebook -->
                     <?php if (get_ot('fb_url') != '') { ?>

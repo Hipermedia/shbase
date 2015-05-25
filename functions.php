@@ -5,6 +5,12 @@
  * Funciones personalizadas de Soluciones Hipermedia
  */
 
+//Enable errors
+function show_errors($array=array()) {
+	error_reporting(E_ALL);
+	ini_set("display_errors", 1);
+}
+
 /* Redirige a la portada si el usuario no está logeado 
 * ------------------------------------------------------------- */
  function soloUsuarioRegistrado() 
