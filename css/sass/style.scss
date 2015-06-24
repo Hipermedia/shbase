@@ -13,9 +13,12 @@ Text Domain: shbase
 @import "_data-mixins.scss";
 @import "_normalize.scss";
 
-/* Utilitarios
+/* Extras
 ------------------------------------------*/
-@import "_animate.scss"; /* Librería de animaciones CSS */
+@import "support/_animate.scss"; /* Librería de animaciones CSS */
+@import "support/bootstrap.scss";
+@import "bootstrap-theme.scss";
+
 
 /* Base
 ------------------------------------------*/

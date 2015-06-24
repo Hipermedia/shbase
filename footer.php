@@ -16,7 +16,7 @@
 <!-- JS personalizados del tema -->
 <?php waypoints(); ?>
 <?php themejs(); ?>
-
+<?php bootstrap(); ?>
 <?php wp_footer(); ?>
 
 </body>

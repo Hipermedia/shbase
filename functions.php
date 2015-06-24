@@ -544,6 +544,13 @@ $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'waypoints', $template_url .'/js/waypoints/jquery.waypoints.min.js', array('jquery'), '', 1);
 }
 
+// Bootstrap
+function bootstrap() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'bootstrap', $template_url .'/js/bootstrap.js', array('jquery'), '', 1);
+}
+
+
 // Scripts del tema
 function themejs() {
 $template_url = get_bloginfo( 'template_url' );
